@@ -11,11 +11,11 @@ k create deploy test-container  --image nginx  --replicas 6  -- bash -c 'for i i
 # edit as below yaml and then 
 k apply -f deploy.yaml
 
-# another pods for use with a selector 
+# another pods for use with a selector filter "app". 
 k run test-pod  --image nginx -l="app=another-app" --command -- bash -c 'for i in {1..10000}; do echo "Hi, $i"; sleep 1; done'
 ```
 
-This is the edited yaml for our environment.  Notice it has two containers.
+This is the edited yaml for our environment from the first create statement edited in vim.  Notice it has two containers, one with hello world and one with hello moon printed in logs.
 
 ``` yaml
 apiVersion: apps/v1
@@ -55,7 +55,7 @@ status: {}
 ```
 
 ## Logs 
-All Conatiners
+Lets run commands to get logs based on all containers, a single container, a deployment (gotcha), with a selector, identifiers and more.
 
 ``` shell
 k logs test-container-[pod unique id] --all-containers
