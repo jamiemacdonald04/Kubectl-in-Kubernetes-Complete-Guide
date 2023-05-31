@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: test-container
+  name: test-container
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: test-container
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: test-container
+    spec:
+      containers:
+      - command:
+        - bash
+        - -c
+        - for i in {1..10000}; do echo "Hi, $i"; sleep 1; done
+        image: nginx
+        name: nginx
+        resources: {}
+status: {}

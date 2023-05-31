@@ -2,7 +2,7 @@
 
 ## Command
 
-Arguments we are taking use off.
+Arguments we are using.
 
 ```shell
 k run my-first-pod --restart=Never --command --labels="run=mypod,collection=gold" --annotations="collection=gold" --env="appName=tiger" --env="animal=tiger" --annotations="animal=tiger" --privileged  --image nginx --port=80 $dry -- sh -c "echo 'hello world'" > mypod
