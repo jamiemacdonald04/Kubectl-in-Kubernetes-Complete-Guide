@@ -2,11 +2,11 @@
 
 ## Environment
 
-This is the starter for 10 kubectl command.
+This is the starter for ten kubectl command.
 
 ```shell
 # a deployment 
-k create deploy test-container  --image nginx  --replicas 6  -- bash -c 'for i in {1..10000}; do echo "Hi, $i"; sleep 1; done' > deploy.yaml
+k create deploy test-pod  --image nginx  --replicas 6  -- bash -c 'for i in {1..10000}; do echo "Hi, $i"; sleep 1; done' > deploy.yaml
 
 # edit as below yaml and then 
 k apply -f deploy.yaml
