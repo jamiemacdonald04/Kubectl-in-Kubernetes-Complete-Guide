@@ -6,9 +6,9 @@ This is the starter for ten kubectl command.
 
 ```shell
 # another pods for use with a selector filter "app". 
-k run test-pod  --image nginx 
+k run test-pod  --image nginx --command -- bash -c "sleep 500"
 
-k create deploy test-deploy --image nginx 
+k create deploy test-deploy --image nginx -- bash -c "sleep 500"
 ```
 
 This is the sample yaml that will be edited in the first example of kubectl edit.
@@ -33,9 +33,20 @@ This is the sample yaml that will be edited in the second example of kubectl edi
 
 ```yaml
   containers:
-  - name: nginx 
-    image: grafana/k6 #change here
+  - name: ubumtu 
+    image: ubuntu:latest #change here
     imagePullPolicy: Always
+    name: test-pod
+    resources: {}
+```
+
+Also what do we do if we get an error.
+
+```yaml
+  containers:
+  - name: ubumtu 
+    image: ubuntu:latest 
+    imagePullPoliy: Always #change here
     name: test-pod
     resources: {}
 ```
@@ -45,9 +56,12 @@ Lets run the varaitions of the edit command.
 
 ``` shell
 k edit pod test-pod 
+k rollout history pod test-pod
+
 k edit pod test-deploy 
 k edit pod test-pod -o json
 k edit pod test-pod --save-config
+k delete
 KUBE_EDITOR="nano" kubectl edit pod test-pod
 
 ```
