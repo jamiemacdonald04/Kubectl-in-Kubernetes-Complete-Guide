@@ -56,12 +56,17 @@ Lets run the varaitions of the edit command.
 
 ``` shell
 k edit pod test-pod 
+
+# used to find out the history after image change.
 k rollout history pod test-pod
+
+# used when trying to change the restart policy inside the container of the pod.
+k replace -f "temp file displayed by terminal" --force
 
 k edit pod test-deploy 
 k edit pod test-pod -o json
 k edit pod test-pod --save-config
-k delete
+
 KUBE_EDITOR="nano" kubectl edit pod test-pod
 
 ```

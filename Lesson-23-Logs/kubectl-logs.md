@@ -1,4 +1,4 @@
-# Logs
+# kubectl Logs
 
 ## Environment
 
