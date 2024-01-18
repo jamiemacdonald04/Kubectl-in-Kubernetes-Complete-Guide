@@ -115,31 +115,44 @@ LhIhYpJ8UsCVt5snWo2N+M+6ANh5tpWdQnEK6zILh4tRbuzaiHgb
 
 ```
 
+generate a YAML
+
+``` yaml
+
+```
+
 ```shell
-kubectl create secret tls tls-secret --cert=path/to/tls.cert --key=path/to/tls.key
+kubectl create secret tls tls-secret --cert=/tls.cert --key=/tls.key
 ```
 
 ## Secret docker-registry
 
-Generated yaml
+Generated yaml from the pod we create using the secret.
 
 ``` yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  name: private-reg
+  creationTimestamp: null
+  labels:
+    run: test-pod
+  name: test-pod
 spec:
   containers:
-  - name: private-reg-container
-    image: <your-private-image>
+  - image: testlogicv1
+    name: test-pod
+    resources: {}
   imagePullSecrets:
-  - name: docker-secret
+  - name: docker-reg 
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
 
 ```
 
 Lets explore creating a docker registry secret.
 
 ```shell
-  kubectl create secret docker-registry docker-secret --docker-server=https://hub.mydocker.com
+  kubectl create secret docker-registry docker-reg --docker-server=https://hub.mydocker.com
 --docker-username=my.username --docker-password=my.password --docker-email=myname@myaccount.com
 ```
