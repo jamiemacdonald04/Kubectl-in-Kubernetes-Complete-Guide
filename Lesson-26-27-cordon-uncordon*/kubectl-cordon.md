@@ -4,11 +4,18 @@ This command is aimed at nodes and will not allow anything to be sheduled on a n
 After cordoning the status will be "Ready,SchedulingDisabled"
 
 ``` shell
+# test deployment 
+kubectl create deployment front-end --replicas 2 --image redis
+
 # note name and node status
 kubectl get nodes 
 # choose the name of a node and substitute where I have put minikube. (minikube is the default node name)
-kubectl cordon minkube
+kubectl cordon minikube
 kubecl get nodes 
+
+kubectl create deployment back-end --replicas 2 --image redis
+kubectl scale deployment front-end --replicas 0
+kubectl scale deployment front-end --replicas 2
 
 # lets reset by using uncordon
 kubectl uncordon minikube

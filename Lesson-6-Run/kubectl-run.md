@@ -1,5 +1,7 @@
 # kubectl Run
 
+Kubectl is used to create pods and is special in the right.  All other objects are created using kubectl create.
+
 ## Command
 
 Arguments we are using.

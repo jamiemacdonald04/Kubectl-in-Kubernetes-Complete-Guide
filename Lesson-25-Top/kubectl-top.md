@@ -1,4 +1,4 @@
-# kubectl label
+# kubectl top
 
 Retrieve the memory and cpu usage for the pod or node.  
 

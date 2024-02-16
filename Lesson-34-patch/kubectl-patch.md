@@ -26,9 +26,47 @@ metadata:
 Lets run commands to get logs based on all containers, a single container, a deployment (gotcha), with a selector, identifiers and more.
 
 ``` shell
-k patch pod test-pod --type merge -f 
-k patch pod test-pod --type replace -f 
+# patch with files
+k create deploy baker --image nginx
 
-k patch pod test-pod --type merge -p '{"spec":{"metadata":{"labels": [{"new":"label"}]}}}'
-k patch pod test-pod --type replace -p '{"spec":{"metadata":{"labels": [{"new":"label"}]}}}'
+#save yaml below in patch.yaml
+vim patch.yaml 
+k patch deploy baker --type merge --patch-file patch.yaml 
+k get pods 
+
+vim patch2.yaml 
+k patch deploy baker --type strategic --patch-file patch2.yaml 
+k get pods 
+
+k patch deploy baker --type merge --patch-file patch.yaml 
+k get pods 
+
+
+# patch with files
+k create deploy butcher --image nginx --dry-run=client -o=yaml > patching-file.yaml
+cat patching-file.yaml
+
+k patch -f patching-file.yaml --local  --type merge --patch-file patch2.yaml -o yaml
+
+
+```
+
+```YAML
+# file for patching, patch.yaml
+spec:
+  template:
+    spec:
+      containers:
+      - name: patch1
+        image: redis
+
+
+
+# file for patching, patch2.yaml
+spec:
+  template:
+    spec:
+      containers:
+      - name: patch2
+        image: nginx
 ```
