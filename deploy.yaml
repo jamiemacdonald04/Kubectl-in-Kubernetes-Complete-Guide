@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: german-shepard
+  name: german-shepard
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: german-shepard
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: german-shepard
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}

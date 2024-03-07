@@ -6,33 +6,33 @@ Lets set up the ksql get environment
 
 ```shell
 
-k api-resources -owide | grep get -m20
+kubectl api-resources -owide | grep get -m20
 
-k create namespace shop-area 
-k create deployment shop-woolies --image redis -n shop-area 
-k create deployment shop-wilkos --image redis -n shop-area 
-k expose deployment shop-wilkos --port 8080 -n shop-area 
-k create cronjob shop-inventry --image nginx --schedule="* * * * 1" -n shop-area 
+kubectl create namespace shop-area 
+kubectl create deployment shop-woolies --image redis -n shop-area 
+kubectl create deployment shop-wilkos --image redis -n shop-area 
+kubectl expose deployment shop-wilkos --port 8080 -n shop-area 
+kubectl create cronjob shop-inventry --image nginx --schedule="* * * * 1" -n shop-area 
 
 # working with labels 
-k label deployment shop-woolies woolworths=dundee  -n shop-area 
-k get deployments --show-labels  -n shop-area 
-k get deployment -l woolworths=dundee -n shop-area 
+kubectl label deployment shop-woolies woolworths=dundee  -n shop-area 
+kubectl get deployments --show-labels  -n shop-area 
+kubectl get deployment -l woolworths=dundee -n shop-area 
 
 # SHOW KIND
 kubectl get pods --show-kind -n shop-area 
 
 # NO ERROR
 # do not through an erro if a resource is not found 
- k get pods warehouse -n shop-area --ignore-not-found
+ kubectl get pods warehouse -n shop-area --ignore-not-found
 
 # NO HEADERS
-# k get without the headers 
+# kubectl get without the headers 
 kubectl get deployments --no-headers -n shop-area 
 
 # ALL NAMESPACES
 # view all namespaces and on label
-k get deployment -l woolworths=dundee -A 
+kubectl get deployment -l woolworths=dundee -A 
 
 # OUTPUT
 # viewing yaml using output
@@ -41,9 +41,9 @@ kubectl get cronjob shop-inventry -o json  -n shop-area
 kubectl get deploy -o wide -n shop-area 
 
 # get a containers name 
-k run shop-cafe --image nginx   -n shop-area 
+kubectl run shop-cafe --image nginx   -n shop-area 
 # add another container 
-k edit pod shop-cafe    -n shop-area 
+kubectl edit pod shop-cafe    -n shop-area 
 # output container names
 kubectl get pod/shop-cafe -o jsonpath={.spec.containers[*].name}   -n shop-area && echo
 # experiment with json path 
@@ -59,11 +59,11 @@ kubectl get pods  -o custom-columns="POD NAME":.metadata.name,"CONTAINER NAME":.
 
 # WATCH
 # add a watch and watch only 
-kubectl create deployment shop-fitters -n shop-area  --image nginx --replicas 6 && k get pods --watch -n shop-area 
+kubectl create deployment shop-fitters -n shop-area  --image nginx --replicas 6 && kubectl get pods --watch -n shop-area 
 
-kubectl create deployment shop-marketing -n shop-area --image nginx --replicas 6 && k get pods --watch-only -n shop-area 
+kubectl create deployment shop-marketing -n shop-area --image nginx --replicas 6 && kubectl get pods --watch-only -n shop-area 
 
-kubectl create deployment shop-facilites --image nginx --replicas 6 && k get pods --watch-only --output-watch-events=true -n shop-area 
+kubectl create deployment shop-facilites --image nginx --replicas 6 && kubectl get pods --watch-only --output-watch-events=true -n shop-area 
 
 # PRINT SERVER
 # server print default and off (without age status and restarts)
@@ -86,18 +86,18 @@ kubectl get services,deployment,cronjob,pod -n shop-area
 # output it to a file (namespaces are a global resource)
 kubectl get services,deployment,cronjob,pod -n shop-area -o yaml > file.yaml
 cat file.yaml 
-k get -f file.yaml
+kubectl get -f file.yaml
 
 # get all resources for a namespace 
-k get all -n shop-area
+kubectl get all -n shop-area
 
 #HIDDEN RESOURCES
 # get hidden resources 
 kubectl create ingress shops --rule="shops.com/service=shop:8080" -n shop-area
 kubectl api-resources --verbs=list --namespaced -o name | head -n 20
-kubectl api-resources --verbs=list --namespaced -o name | xargs kubectl get --show-kind --ignore-not-found -n shop-area
+kubectl api-resources --verbs=list --namespaced -o name | xargs -n1 kubectl get --show-kind --ignore-not-found -n shop-area 
 
   # for those extra large lists 
-k get all -n shop-area --chunk-size=500
+kubectl get all -n shop-area --chunk-size=500
 
 ```
