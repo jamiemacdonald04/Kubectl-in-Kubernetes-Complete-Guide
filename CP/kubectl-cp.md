@@ -39,7 +39,7 @@ We look into copying files from the computer to the server
     kubectl cp shop:/tmp/hello.txt butcher:/tmp/hello.txt
     # error: one of src or dest must be a local file specification and how would you specifiy the container
 
-    # lets copy a directory 
+    # lets copy a directory kubec
     mkdir camara && cd camara
     echo "lens" > lens.txt && echo "film" > film.txt && echo "flash" > flash.txt
     cd ../
@@ -48,7 +48,7 @@ We look into copying files from the computer to the server
     kubectl run camara-shop --image nginx 
     tar cf - camara | kubectl exec -i  camara-shop -- tar xf - -C ./
     kubectl exec camara-shop -- ls camara
-    kubectl exec camara-shop -- ls camara
+   
 
     # lets to to the server and tar up the server side and send it to the pc and call it camara
     mkdir pod2pc
