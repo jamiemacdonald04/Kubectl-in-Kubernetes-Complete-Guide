@@ -1,6 +1,6 @@
 # kubectl Run
 
-Kubectl is used to create pods and is special in the right.  All other objects are created using kubectl create.
+Kubectl run is a command that creates a pod.  You can use these pods to call out to other pods.  All other objects are created using methods like `kubectl create`, `kubectl expose` or `kubectl autoscale`.
 
 ## Command
 

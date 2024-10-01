@@ -1,6 +1,6 @@
 # kubectl Delete
 
-Allows you to change add edit and delete labels on resources.
+the `kubectl delete` allows you to delete resources by name, label, and namespace.
 
 ``` shell
 # set up

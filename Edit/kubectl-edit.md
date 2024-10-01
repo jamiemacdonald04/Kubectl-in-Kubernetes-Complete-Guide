@@ -1,8 +1,7 @@
 # Kubectl Edit
 
-## Environment
-
-This is the starter for ten kubectl command.
+The `kubectl edit` is a command that is used to edit the configuration of a resource in the cluster. 
+This is useful when you want to make changes to a resource that is already running in the cluster. 
 
 ```shell
 # another pods for use with a selector filter "app". 
