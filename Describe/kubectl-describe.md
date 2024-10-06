@@ -1,6 +1,5 @@
 # kubectl describe
-
-Kubectl is used to describe the definition of kubernetes resources
+The `kubectl describe` command is used to show details about a resource in the cluster in a more readable format.
 
 ## Command
 

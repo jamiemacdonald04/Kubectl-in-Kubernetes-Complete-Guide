@@ -24,10 +24,10 @@ kubectl events --for=pod/fishchips -n food --types=Warning
 
 # no header and output as yaml
 kubectl events -n food --no-headers
-kubectl events -n food --no-headers -o yaml
+kubectl events -n food -o yaml
 
 # all namespaces 
-kubectl events -A
+kubectl events --for=pod/fishchips -A
 
 # with a watch 
 kubectl events -n food --watch

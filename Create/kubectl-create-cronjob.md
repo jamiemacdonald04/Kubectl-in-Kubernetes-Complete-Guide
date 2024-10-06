@@ -1,5 +1,8 @@
 # kubectl create cronjob
 
+The `kubectl create cronjob` command is used to create a cron job in the Kubernetes cluster.
+A cron job is a job that runs on a schedule.
+
 ## cronjob
 
 Lets explore creating a cron job, schedule is 

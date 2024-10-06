@@ -2,7 +2,10 @@
 
 ## Environment
 
-This is the starter for ten kubectl command.
+The `kubectl explain` command is used to get information about a resource in the cluster. 
+You can use this in a pickle with grep to get information on a resource.
+
+``` shell
 
 ```shell
 # another pods for use with a selector filter "app". 

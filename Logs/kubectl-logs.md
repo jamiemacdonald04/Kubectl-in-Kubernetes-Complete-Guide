@@ -1,18 +1,16 @@
 # kubectl Logs
 
-## Environment
-
-This is the starter for ten kubectl command.
+The `kubectl logs` command is used to print the logs from a container in a pod. 
 
 ```shell
 # a deployment 
-k create deploy test-pod  --image nginx  --replicas 6  -- bash -c 'for i in {1..10000}; do echo "Hi, $i"; sleep 1; done' > deploy.yaml
+kubectl create deploy test-pod  --image nginx  --replicas 6  -- bash -c 'for i in {1..10000}; do echo "Hi, $i"; sleep 1; done' > deploy.yaml
 
 # edit as below yaml and then 
-k apply -f deploy.yaml
+kubectl apply -f deploy.yaml
 
 # another pods for use with a selector filter "app". 
-k run test-pod  --image nginx -l="app=another-app" --command -- bash -c 'for i in {1..10000}; do echo "Hi, $i"; sleep 1; done'
+kubectl run test-pod  --image nginx -l="app=another-app" --command -- bash -c 'for i in {1..10000}; do echo "Hi, $i"; sleep 1; done'
 ```
 
 This is the edited yaml for our environment from the first create statement edited in vim.  Notice it has two containers, one with hello world and one with hello moon printed in logs.

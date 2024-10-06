@@ -1,8 +1,6 @@
-# kubectl set 
+# kubectl set
 
-## Environment
-
-Lets set container resources
+The `kubectl set resources` command is used to set resource requests and limits on a resource. 
 
 ```shell
 

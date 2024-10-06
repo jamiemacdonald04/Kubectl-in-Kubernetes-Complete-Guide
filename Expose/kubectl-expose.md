@@ -1,5 +1,5 @@
 # kubectl expose
-Lets talk about ports to help us understand what a service is.
+The `kubectl expose` command is used to expose a resource through a new Kubernetes service.
 **Port** exposes the Kubernetes service on the specified port within the cluster. 
 **TargetPort** is the port on which the service will send requests to, that your pod will be listening on. 
 **NodePort** exposes a service externally to the cluster by means of the target nodes IP address and the NodePort.

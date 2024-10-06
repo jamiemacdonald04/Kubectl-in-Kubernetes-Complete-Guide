@@ -1,6 +1,7 @@
 # kubectl attach
 
-kubectl attach is a convenient way to attach to a running container. It allows you to attach to the standard input, output, and error streams of a running container.
+The `kubectl attach` command is a convenient way to attach to a running container. 
+It allows you to attach to the standard input, tty, and error streams of a running container.
 
 ## Command
 

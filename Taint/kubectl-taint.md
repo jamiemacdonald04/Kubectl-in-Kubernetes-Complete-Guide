@@ -1,10 +1,6 @@
 # kubectl taint
 
-Kubectl drain is used to manage the move of pods from one node to another.
-
-## Command
-
-Commands.
+The `kubectl taint` command is used to taint nodes. Taints are used to repel pods from nodes
 
 ```shell
   # explore help 

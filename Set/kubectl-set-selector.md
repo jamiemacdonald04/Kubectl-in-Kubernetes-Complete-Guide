@@ -1,8 +1,6 @@
-# kubectl set 
+# kubectl set selector
 
-## Environment
-
-Lets set the selector of various objects
+The `kubectl set selector` command is used to set the selector on a resource.
 
 ```shell
 # selector       

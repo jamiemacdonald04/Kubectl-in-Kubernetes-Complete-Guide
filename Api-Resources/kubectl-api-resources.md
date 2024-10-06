@@ -2,7 +2,8 @@
 
 ## api-resources
 
-Let's use the api-resources kubectl command to find out the version of resources we can use.  We talk about how this will come in handy not just for the CKAD exam but also for day to day usage.
+The `kubectl api-resources` command  allows you to reference resources that you can use.  
+We talk about how this will come in handy not just for the CKAD exam but also for day to day usage.
 
 ``` shell
 k api-resources

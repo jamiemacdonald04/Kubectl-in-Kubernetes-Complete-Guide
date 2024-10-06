@@ -2,8 +2,9 @@
 
 ## api versions
 
-Allows you to change add edit adn delete anotations on resources.  Lets explore this in more detail.
+The `kubectl annotate` command allows you to add edit and delete anotations on resources.  Let's explore this in more detail.
 pod
+
 ``` shell
   
   # First annotation

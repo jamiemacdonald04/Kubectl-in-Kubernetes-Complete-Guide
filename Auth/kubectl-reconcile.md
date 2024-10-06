@@ -1,6 +1,6 @@
 # kubectl reconcile
 
-Reconciles rules for RBAC role, role binding, cluster role, and cluster role binding objects. 
+The `kubectl reconcile` command is used to reconcile rules for RBAC role, role binding, cluster role, and cluster role binding objects.
 This is prefered over merge because of the extra rules on merging that are provided.
 
 ## Command

@@ -1,6 +1,7 @@
 # kubectl cluster information
 
-Kubectl is used to create pods and is special in the right.  All other objects are created using kubectl create.
+The `kubectl cluster-info` command is used to get the information about the cluster.  
+This is useful when you want to know the status of the cluster and the services that are running.
 
 ## Command
 

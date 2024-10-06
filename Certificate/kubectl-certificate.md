@@ -1,5 +1,5 @@
 # kubectl certificate 
-Lets explore the kubectl certificate command.
+The `kubectl certificate` command is used to approve or deny a certificate signing request.
 ```shell
 
 ## k8s reference 

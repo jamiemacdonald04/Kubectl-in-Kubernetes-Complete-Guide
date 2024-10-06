@@ -1,5 +1,8 @@
 # kubectl create job
 
+The `kubectl create job` command is used to create a job object in the cluster.
+A job a pod that can run multiple container to completion.
+
 ## job
 
 Edited YAML.

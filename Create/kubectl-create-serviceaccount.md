@@ -1,5 +1,7 @@
 # kubectl create serviceaccount
 
+The `kubectl create serviceaccount` command is used to create a service account object in the cluster.
+
 ## serviceaccount
 
 lets explore creating a service account

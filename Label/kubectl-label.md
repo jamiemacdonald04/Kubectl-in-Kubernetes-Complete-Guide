@@ -1,6 +1,6 @@
 # kubectl label
 
-Allows you to change add edit and delete labels on resources.
+The `kubectl label` command is used to update, add, or remove labels on a resource.
 
 ``` shell
   k run test-pod --image nginx $dry > pod.yaml 

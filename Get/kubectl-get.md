@@ -2,7 +2,7 @@
 
 ## Environment
 
-Lets set up the ksql get environment
+The `kubectl get` command is used to list resources in the cluster.
 
 ```shell
 

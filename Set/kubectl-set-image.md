@@ -1,8 +1,6 @@
-# kubectl set 
+# kubectl set image
 
-## Environment
-
-Lets explore how to set different images using kubectl
+The `kubectl set image` command is used to update the image of a container in a pod. 
 
 ```shell
 # images

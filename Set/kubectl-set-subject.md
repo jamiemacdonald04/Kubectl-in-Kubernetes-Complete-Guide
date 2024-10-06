@@ -1,8 +1,6 @@
-# kubectl set 
+# kubectl set subject
 
-## Environment
-
-Lets expore setting the subject of a role binding
+The `kubectl set subject` command is used to update the user, group, or service account in a role binding or cluster role binding.
 
 ```shell
 # subject        

@@ -1,6 +1,7 @@
 # kubectl drain
 
-Kubectl drain is used to manage the move of pods from one node to another.
+The `kubectl drain` command is a safe way to evict all of the pods from the node and then mark the node as unschedulable.
+This is useful when you want to perform maintenance on a node or remove it from the cluster and this will prevent any new pods from being scheduled on the node. 
 
 ## Command
 

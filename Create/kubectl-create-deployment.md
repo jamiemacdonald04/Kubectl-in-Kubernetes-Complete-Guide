@@ -1,5 +1,8 @@
 # kubectl create deployment
 
+The `kubectl create deployment` command is used to create a deployment in the cluster.
+A deployment is a Kubernetes object that manages a replicated application.
+
 ## deployment
 
 Lets explore creating a deployment

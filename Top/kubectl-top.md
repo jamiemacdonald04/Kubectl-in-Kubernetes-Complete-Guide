@@ -1,6 +1,6 @@
 # kubectl top
 
-Retrieve the memory and cpu usage for the pod or node.  
+The `kubectl top` command is used to display Resource (CPU/Memory) usage.
 
 ``` shell
 kubectl create namespace trades

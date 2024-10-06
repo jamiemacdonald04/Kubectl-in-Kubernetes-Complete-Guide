@@ -1,6 +1,10 @@
 # kubectl scale
 
-If the object has replicas you can use it to scale  up and down the replicas and in some cases to manafest edits you have made to the object.  For example statefulsets and deployments can all be scaled or you can scale the replicaSet associated with these.
+The `kubectl scale` command is used to scale the number of replicas in a deployment, replicaSet, or statefulSet.
+For example statefulsets and deployments can all be scaled or you can scale the replicaSet associated with these.
+This can also be done to elevate issues such as split brain, by scaling to 0 and then back up to the desired number of replicas.
+
+``` shell
 
 Lets go ahead and create a deployment and scale it from 1 to 3.
 

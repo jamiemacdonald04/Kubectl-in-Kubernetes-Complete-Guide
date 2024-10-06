@@ -1,6 +1,6 @@
 # kubectl exec
 
-Kubectl exec is used to run commands on container within a pod.
+The `kubectl exec` command is used to run commands on a container within a pod.
 
 ## Command
 

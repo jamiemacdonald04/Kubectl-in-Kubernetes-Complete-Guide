@@ -1,5 +1,8 @@
 # kubectl create secret
 
+The `kubectl create secret` command is used to create a secret object in the cluster.  These are not encrypted but are base64 encoded.  
+The secret object can be used to store sensitive information such as passwords, keys, and tokens and they can be hidden from users using rbac.
+
 ## Secret Generic
 
 generate a YAML

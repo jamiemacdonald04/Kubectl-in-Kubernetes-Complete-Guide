@@ -1,6 +1,8 @@
 # kubectl create configmap
 
-Edited test yaml for pod using configMaps
+The `kubectl create configmap` command is used to create a config map in a Kubernetes cluster.
+A config map is a collection of key value pairs that can be used to store configuration data.
+
 ```yaml 
 apiVersion: v1
 kind: Pod

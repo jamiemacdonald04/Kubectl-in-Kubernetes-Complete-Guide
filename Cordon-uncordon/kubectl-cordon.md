@@ -1,6 +1,6 @@
 # kubectl cordon
-
-This command is aimed at nodes and will not allow anything to be sheduled on a node that has been cordoned.
+The `kubectl cordon` command is used to mark a node as unschedulable. 
+This command is aimed at nodes and will not allow anything to be scheduled on a node that has been cordoned.
 After cordoning the status will be "Ready,SchedulingDisabled"
 
 ``` shell

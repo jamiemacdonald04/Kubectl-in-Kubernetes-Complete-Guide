@@ -1,8 +1,7 @@
 # kubectl version
 
 ## version
-
-Lets use the version command to establish what version of kubectl we are running and what version is on the server.
+The `kubectl version` command is used to display the Kubernetes version running on the client and the server.
 
 ``` shell
 k version 

@@ -2,7 +2,8 @@
 
 ## setting up aliases
 
-This is the parent for using the kubectl set
+Setting up aliases in the bashrc file is a good way to save time and make your life easier.
+I would say this is especially true when sitting the ckad exam.
 
 ```shell
 vim ~/.bashrc

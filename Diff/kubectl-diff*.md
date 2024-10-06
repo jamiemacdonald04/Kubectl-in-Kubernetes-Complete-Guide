@@ -1,6 +1,6 @@
 # kubectl diff
 
-lets explore the diff command for comparing k8 objects.
+The `kubectl diff` command is used to compare the differences between the current state of an object and the desired state of an object.
 
 ``` shell
 
@@ -9,8 +9,6 @@ k run  live-pod --dry-run=client -o yaml  --image nginx -- sh -c "echo 'jamie'" 
 
 # now lets create a pod that we are intersted in testing the stored script above.
 k run  live-pod --image nginx --command  -- sh -c "echo 'jamie'" 
-
-
 
 # use diff to see the differences. 
 kubectl diff -f stored-pod.yaml

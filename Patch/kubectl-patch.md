@@ -1,5 +1,7 @@
 # kubectl Patch
 
+The `kubectl patch` command is used to update fields in a resource.
+
 ## Environment
 
 This is the starter for ten kubectl command.

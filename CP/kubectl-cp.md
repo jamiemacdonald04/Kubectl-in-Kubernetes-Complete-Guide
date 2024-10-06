@@ -1,9 +1,8 @@
 # kubectl cp
 
-## Environment
+The `kubectl cp` command is used to copy files and directories to and from containers and your machine.
 
 We look into copying files from the computer to the server
-
 
 ```shell
     # set up and add another container, see the yaml below

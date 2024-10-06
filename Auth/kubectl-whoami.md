@@ -1,6 +1,6 @@
 # kubectl whoami (experimental)
 
-Kubectl is used to tell you who you are logged into and what groups you are part off
+The `kubectl auth whoami` command is used to get the current user and the groups that the user is part of.
 
 ## Command
 

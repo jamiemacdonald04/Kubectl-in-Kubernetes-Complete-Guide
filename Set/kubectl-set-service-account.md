@@ -1,8 +1,6 @@
-# kubectl set 
+# kubectl set serviceaccount
 
-## Environment
-
-Lets expore setting a service account for a container
+The `kubectl set serviceaccount` command is used to update the service account of a resource.
 
 ```shell
   # serviceaccount Update the service account of a resource

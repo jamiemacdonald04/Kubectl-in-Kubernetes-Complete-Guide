@@ -1,8 +1,6 @@
-# kubectl set 
+# kubectl set env
 
-## Setting Environment
-
-Lets explore how to set enviroment vars
+The `kubectl set env` command is used to set environment variables on a resource. 
 
 ```shell
 # environments

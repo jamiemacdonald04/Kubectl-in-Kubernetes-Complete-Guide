@@ -1,6 +1,6 @@
 # kubectl auth can i
 
-Kubectl is used to determine if you user can or cannot do a certain action
+The `kubectl auth can-i` command is used to determine if a user can perform a certain action.
 
 ## Command
 

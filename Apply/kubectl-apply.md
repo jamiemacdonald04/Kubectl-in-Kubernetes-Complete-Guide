@@ -1,8 +1,9 @@
 # kubectl apply
-Let's explore the kubectl apply command in great detail.  
+The `kubectl apply` command is a powerful command that is used to apply configuration to your kubernetes cluster.
 You will use this a lot to apply yaml to your kubernetes cluster.  
 It is a powerful command that can be used to create and update resources in your cluster.  
 It is a declarative command that will apply the configuration defined in files to your cluster.
+It can also be used to see last configuration applied to a resource.
 
 ```shell
 # environment set up

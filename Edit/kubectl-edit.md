@@ -5,9 +5,9 @@ This is useful when you want to make changes to a resource that is already runni
 
 ```shell
 # another pods for use with a selector filter "app". 
-k run test-pod  --image nginx --command -- bash -c "sleep 500"
+kubectl run test-pod  --image nginx --command -- bash -c "sleep 500"
 
-k create deploy test-deploy --image nginx -- bash -c "sleep 500"
+kubectl create deploy test-deploy --image nginx -- bash -c "sleep 500"
 ```
 
 This is the sample yaml that will be edited in the first example of kubectl edit.

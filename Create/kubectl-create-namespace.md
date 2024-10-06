@@ -1,6 +1,7 @@
 # kubectl create namespace
 
-Generated yaml.
+The `kubectl create namespace` command is used to create a namespace in the cluster.  
+A namesapce is a way to divide cluster resources between multiple users and workspaces, also it is a way to create a virtual cluster within the cluster.
 
 ```yaml
 
