@@ -2,7 +2,7 @@
 
 ## course prerequisites
 Install:
-* minikube https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Farm64%2Fstable%2Fbinary+download
+* minikube https://minikube.sigs.k8s.io/docs/start
 * kubectl https://kubernetes.io/docs/tasks/tools/#kubectl
 
 or use
